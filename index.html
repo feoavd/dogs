@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Собачки</title>
+</head>
+<body>
+      <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-paw"></i>
+                <h1>Мир Собак</h1>
+            </div>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Главная</a></li>
+                    <li><a href="#breeds">Породы</a></li>
+                    <li><a href="#about">О проекте</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <h2>Откройте для себя удивительный мир собак</h2>
+            <p>На нашем сайте вы найдете информацию о более чем 50 различных породах собак: от маленьких декоративных до крупных служебных. Узнайте об особенностях характера, уходе и воспитании каждой породы.</p>
+            <a href="#breeds" class="btn">Исследовать породы</a>
+        </div>
+    </section>
+
+    <main class="container">
+        <section class="filter-section">
+            <h3>Фильтр по категориям:</h3>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Все породы</button>
+                <button class="filter-btn" data-filter="small">Маленькие</button>
+                <button class="filter-btn" data-filter="medium">Средние</button>
+                <button class="filter-btn" data-filter="large">Крупные</button>
+                <button class="filter-btn" data-filter="working">Служебные</button>
+                <button class="filter-btn" data-filter="hunting">Охотничьи</button>
+            </div>
+        </section>
+
+        <section id="breeds">
+            <h2 style="text-align: center; margin-bottom: 2rem; color: #2c3e50;">Популярные породы собак</h2>
+            <div class="breeds-grid">
+                <div class="breed-card" data-category="medium working">
+                    <img src="./images/nemec.jpg" alt="Немецкая овчарка" class="breed-img">
+                    <div class="breed-info">
+                        <h3>Немецкая овчарка</h3>
+                        <span class="breed-category">Служебная</span>
+                        <p>Умная, преданная и универсальная порода, широко используемая в полиции, армии и как собака-поводырь.</p>
+                        <div class="breed-stats">
+                            <div class="stat">
+                                <div class="stat-value">60-65 см</div>
+                                <div class="stat-label">Рост</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">9-13 лет</div>
+                                <div class="stat-label">Продолжительность жизни</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">Высокая</div>
+                                <div class="stat-label">Активность</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="breed-card" data-category="small">
+                    <img src="./images/iork.jpg" alt="Йоркширский терьер" class="breed-img">
+                    <div class="breed-info">
+                        <h3>Йоркширский терьер</h3>
+                        <span class="breed-category">Декоративная</span>
+                        <p>Маленькая, энергичная и уверенная в себе собака с длинной шелковистой шерстью, не линяет и подходит аллергикам.</p>
+                        <div class="breed-stats">
+                            <div class="stat">
+                                <div class="stat-value">15-18 см</div>
+                                <div class="stat-label">Рост</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">13-16 лет</div>
+                                <div class="stat-label">Продолжительность жизни</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">Средняя</div>
+                                <div class="stat-label">Активность</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="breed-card" data-category="large hunting">
+                    <img src="./images/ret.webp" alt="Лабрадор-ретривер" class="breed-img">
+                    <div class="breed-info">
+                        <h3>Лабрадор-ретривер</h3>
+                        <span class="breed-category">Охотничья</span>
+                        <p>Дружелюбная, общительная и активная порода, отлично ладит с детьми и часто используется как собака-поводырь.</p>
+                        <div class="breed-stats">
+                            <div class="stat">
+                                <div class="stat-value">54-57 см</div>
+                                <div class="stat-label">Рост</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">10-14 лет</div>
+                                <div class="stat-label">Продолжительность жизни</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">Очень высокая</div>
+                                <div class="stat-label">Активность</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="breed-card" data-category="medium">
+                    <img src="./images/has.jpg" alt="Сибирский хаски" class="breed-img">
+                    <div class="breed-info">
+                        <h3>Сибирский хаски</h3>
+                        <span class="breed-category">Ездовая</span>
+                        <p>Энергичная, выносливая и дружелюбная порода с густой шерстью и пронзительными голубыми глазами.</p>
+                        <div class="breed-stats">
+                            <div class="stat">
+                                <div class="stat-value">50-60 см</div>
+                                <div class="stat-label">Рост</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">12-15 лет</div>
+                                <div class="stat-label">Продолжительность жизни</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">Очень высокая</div>
+                                <div class="stat-label">Активность</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="breed-card" data-category="small">
+                    <img src="./images/byl.jpg" alt="Французский бульдог" class="breed-img">
+                    <div class="breed-info">
+                        <h3>Французский бульдог</h3>
+                        <span class="breed-category">Декоративная</span>
+                        <p>Компактная, мускулистая собака с большими стоячими ушами и спокойным, дружелюбным характером.</p>
+                        <div class="breed-stats">
+                            <div class="stat">
+                                <div class="stat-value">27-35 см</div>
+                                <div class="stat-label">Рост</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">10-12 лет</div>
+                                <div class="stat-label">Продолжительность жизни</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">Низкая</div>
+                                <div class="stat-label">Активность</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="breed-card" data-category="large working">
+                    <img src="./images/old.webp" alt="Золотистый ретривер" class="breed-img">
+                    <div class="breed-info">
+                        <h3>Золотистый ретривер</h3>
+                        <span class="breed-category">Охотничья</span>
+                        <p>Добродушная, умная и преданная порода с красивой золотистой шерстью, отлично подходит для семей с детьми.</p>
+                        <div class="breed-stats">
+                            <div class="stat">
+                                <div class="stat-value">51-61 см</div>
+                                <div class="stat-label">Рост</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">10-12 лет</div>
+                                <div class="stat-label">Продолжительность жизни</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">Высокая</div>
+                                <div class="stat-label">Активность</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section" id="about">
+                    <h3>О проекте</h3>
+                    <p>Сайт "Мир Собак" создан для всех любителей собак. Мы собираем информацию о различных породах, их особенностях, уходе и воспитании.</p>
+                    <p>Наша цель - помочь людям выбрать подходящую породу собаки и правильно заботиться о своих питомцах.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Быстрые ссылки</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Главная</a></li>
+                        <li><a href="#breeds">Все породы</a></li>
+                        <li><a href="#">Маленькие породы</a></li>
+                        <li><a href="#">Крупные породы</a></li>
+                        <li><a href="#">Служебные собаки</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Москва, ул. Собачья, 15</p>
+                    <p><i class="fas fa-phone"></i> +7 (495) 123-45-67</p>
+                    <p><i class="fas fa-envelope"></i> info@dogworld.ru</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Мир Собак. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            document.querySelector('nav').classList.toggle('active');
+        });
+
+        // Filter functionality
+        document.querySelectorAll('.filter-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all buttons
+                document.querySelectorAll('.filter-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                // Get filter value
+                const filterValue = this.getAttribute('data-filter');
+                
+                // Get all breed cards
+                const breedCards = document.querySelectorAll('.breed-card');
+                
+                // Show/hide cards based on filter
+                breedCards.forEach(card => {
+                    if (filterValue === 'all' || card.getAttribute('data-category').includes(filterValue)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    document.querySelector('nav').classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
