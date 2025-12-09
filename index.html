@@ -4,10 +4,141 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>Собачки</title>
+    <style>
+        /* Стили для карточек ухода */
+        .care-cards-section {
+            margin: 4rem auto;
+            max-width: 1200px;
+        }
+        
+        .care-cards-section h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #2c3e50;
+        }
+        
+        .care-cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .care-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border: 1px solid #e9ecef;
+        }
+        
+        .care-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+        
+        .care-card-header {
+            padding: 1.2rem;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .care-card-1 .care-card-header {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+        }
+        
+        .care-card-2 .care-card-header {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+        }
+        
+        .care-card-3 .care-card-header {
+            background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+        }
+        
+        .care-card-icon {
+            font-size: 1.5rem;
+        }
+        
+        .care-card-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 0;
+        }
+        
+        .care-card-body {
+            padding: 1.2rem;
+        }
+        
+        .care-tip {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.8rem;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #f1f1f1;
+        }
+        
+        .care-tip:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        
+        .care-tip i {
+            color: #3498db;
+            margin-top: 0.2rem;
+            font-size: 1rem;
+        }
+        
+        .care-tip-content h4 {
+            margin: 0 0 0.3rem 0;
+            color: #2c3e50;
+            font-size: 0.95rem;
+        }
+        
+        .care-tip-content p {
+            margin: 0;
+            color: #666;
+            font-size: 0.85rem;
+            line-height: 1.4;
+        }
+        
+        .care-card-footer {
+            padding: 0.8rem 1.2rem;
+            background: #f8f9fa;
+            border-top: 1px solid #e9ecef;
+            font-size: 0.8rem;
+            color: #666;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .care-difficulty {
+            display: flex;
+            gap: 0.2rem;
+        }
+        
+        .care-difficulty i {
+            color: #ffc107;
+            font-size: 0.8rem;
+        }
+        
+        @media (max-width: 768px) {
+            .care-cards-container {
+                grid-template-columns: 1fr;
+                padding: 0 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-      <header>
+    <header>
         <div class="container header-container">
             <div class="logo">
                 <i class="fas fa-paw"></i>
@@ -190,6 +321,134 @@
                 </div>
             </div>
         </section>
+
+        <!-- Добавляем секцию с карточками по уходу за собаками -->
+        <section class="care-cards-section">
+            <h2>Основы ухода за собаками</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                Правильный уход - залог здоровья и счастливой жизни вашего питомца. Вот основные рекомендации для начинающих собаководов.
+            </p>
+            
+            <div class="care-cards-container">
+                <!-- Карточка 1: Гигиена и купание -->
+                <div class="care-card care-card-1">
+                    <div class="care-card-header">
+                        <i class="fas fa-shower care-card-icon"></i>
+                        <h3 class="care-card-title">Гигиена и купание</h3>
+                    </div>
+                    <div class="care-card-body">
+                        <div class="care-tip">
+                            <i class="fas fa-calendar-alt"></i>
+                            <div class="care-tip-content">
+                                <h4>Регулярность</h4>
+                                <p>Купание: 1 раз в 1-2 месяца. Расчесывание: ежедневно для длинношерстных пород.</p>
+                            </div>
+                        </div>
+                        <div class="care-tip">
+                            <i class="fas fa-paw"></i>
+                            <div class="care-tip-content">
+                                <h4>Средства</h4>
+                                <p>Используйте только специальные собачьи шампуни с правильным pH балансом.</p>
+                            </div>
+                        </div>
+                        <div class="care-tip">
+                            <i class="fas fa-tint"></i>
+                            <div class="care-tip-content">
+                                <h4>Температура</h4>
+                                <p>Вода должна быть теплой (37-39°C). Тщательно смывайте шампунь.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="care-card-footer">
+                        <span>Сложность ухода:</span>
+                        <div class="care-difficulty">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Карточка 2: Питание и рацион -->
+                <div class="care-card care-card-2">
+                    <div class="care-card-header">
+                        <i class="fas fa-utensils care-card-icon"></i>
+                        <h3 class="care-card-title">Питание и рацион</h3>
+                    </div>
+                    <div class="care-card-body">
+                        <div class="care-tip">
+                            <i class="fas fa-clock"></i>
+                            <div class="care-tip-content">
+                                <h4>Режим кормления</h4>
+                                <p>Взрослых собак кормят 2 раза в день в одно и то же время.</p>
+                            </div>
+                        </div>
+                        <div class="care-tip">
+                            <i class="fas fa-ban"></i>
+                            <div class="care-tip-content">
+                                <h4>Запрещенные продукты</h4>
+                                <p>Шоколад, лук, чеснок, виноград, авокадо, алкоголь.</p>
+                            </div>
+                        </div>
+                        <div class="care-tip">
+                            <i class="fas fa-tint"></i>
+                            <div class="care-tip-content">
+                                <h4>Вода</h4>
+                                <p>Всегда обеспечивайте доступ к свежей чистой воде.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="care-card-footer">
+                        <span>Сложность ухода:</span>
+                        <div class="care-difficulty">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Карточка 3: Здоровье и профилактика -->
+                <div class="care-card care-card-3">
+                    <div class="care-card-header">
+                        <i class="fas fa-heartbeat care-card-icon"></i>
+                        <h3 class="care-card-title">Здоровье и профилактика</h3>
+                    </div>
+                    <div class="care-card-body">
+                        <div class="care-tip">
+                            <i class="fas fa-syringe"></i>
+                            <div class="care-tip-content">
+                                <h4>Вакцинация</h4>
+                                <p>Первая прививка в 6-8 недель, ревакцинация ежегодно.</p>
+                            </div>
+                        </div>
+                        <div class="care-tip">
+                            <i class="fas fa-bug"></i>
+                            <div class="care-tip-content">
+                                <h4>Защита от паразитов</h4>
+                                <p>Обработка от глистов каждые 3 месяца, от блох и клещей - ежемесячно.</p>
+                            </div>
+                        </div>
+                        <div class="care-tip">
+                            <i class="fas fa-stethoscope"></i>
+                            <div class="care-tip-content">
+                                <h4>Регулярные осмотры</h4>
+                                <p>Посещайте ветеринара для профилактических осмотров 1-2 раза в год.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="care-card-footer">
+                        <span>Сложность ухода:</span>
+                        <div class="care-difficulty">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer id="contact">
@@ -275,6 +534,33 @@
                     // Close mobile menu if open
                     document.querySelector('nav').classList.remove('active');
                 }
+            });
+        });
+
+        // Добавляем анимацию для карточек ухода
+        document.addEventListener('DOMContentLoaded', function() {
+            const careCards = document.querySelectorAll('.care-card');
+            
+            // Наблюдатель за появлением элементов в области видимости
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+            
+            // Начальное состояние и применение анимации
+            careCards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                card.style.transitionDelay = (index * 0.1) + 's';
+                
+                observer.observe(card);
             });
         });
     </script>
